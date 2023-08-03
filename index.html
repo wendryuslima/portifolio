@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wendryus Lima</title>
+
+</head> 
+
+<body>
+
+    <header>
+
+        <div class="center">
+
+            <div class="logo">
+                <img src="image/icons8-reagir-80.png">
+                <h3>Wendryus Lima</h3>
+            </div><!--logo-->
+
+            <div class="menu">
+                <a href="#home" class="home-link">Home</a>
+                <a href="#sobre-mim" class="sobre-link">Sobre mim</a>
+                <a href="https://web.whatsapp.com/">Contatos</a>
+            </div><!--menu-->
+
+            <button onclick="animarMenu()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+
+            </button>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <a href="#home" class="home-link">Home</a>
+                <a href="#sobre-mim" class="sobre-link">Sobre mim</a>
+                <a href="https://web.whatsapp.com/">Contatos</a>
+            </div><!--menu-->
+            
+
+
+
+        </div><!--center-->
+
+    </header>
+
+    <section class="main" id="main-home">
+
+        <div id="home" class="center">
+            <div class="main-cta">
+                <h2>Olá, eu sou Wendryus Lima</h2>
+                <p>Conheça um pouco mais sobre mim e as tecnologias que domino.</p>
+                
+            </div><!--main-cta-->
+        </div>
+
+
+
+
+            <div class="diferenciais">
+                
+                
+                <div class="diferenciais-single" >
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>HTML</h2>
+                    <p>Domino todas as ténicas e evouloções do HTML5</p>
+                </div><!--diferencial-single-->
+
+                <div class="diferenciais-single">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>CSS 3</h2>
+                    <p>Tenho ótima prática com CSS, consigo deixar o projeto bem personalizado e com um bom desginer.</p>
+                </div><!--diferencial-single-->
+
+             
+
+
+                <div class="diferenciais-single">
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>JAVASCRIPT</h2>
+                    <p>Uso JAVASCRIPT para fazer animações e deixar meu site mais interativo</p>
+                </div><!--diferencial-single-->
+
+            </div><!--diferenciais-->
+        </div><!--center-->
+
+
+    </section><!--main-->
+
+    <section class="sobre mim" id="sobre-mim">
+        <div class="center">
+            <div class="chamada-sobre">
+                <h2>Sobre mim</h2>
+                <p>Meu nome é Wendryus Lima, e um desenvolvedor front-end apaixonado por tecnologia e programação. Busco a cada dia o aprimoramento na programção, construindo sites com bom designer, responsidade, e interatividade do usuário. Estou em busca da minha primeira oportunidade e experiência na área, pois sei que posso me desenvolver muito.</p>
+            </div>
+
+            <div class="conteudo-sobre">
+                <p>Apesar de não tem uma experiência formal na área, tenho me empenhado em melhorar minhas habilidades, desenvolvendo sites, buscando copiar landing pages, adquirir todo conhecimento, para que eu consiga expandir meus conhecimentos e conseguir aplicá-los de forma precisa.</p>
+                <p>Logo abaixo, você poderá ver algumas das minha criações e projetos que desenvolvi.</p>
+            </div><!--conteudo sobre-->
+            
+        </div><!--center-->
+
+    </section><!--sobre-->
+
+    <section class="number">
+
+        <div class="center">
+
+          
+            <div class="projeto">
+                <h2>Projetos</h2>
+
+            </div><!--projeto-->
+
+            <div class="projeto-single">
+
+                <div class="projeto-two">
+                    <h2>Academia infinity</h2>
+                    <img src="image/Captura de tela de 2023-06-12 16-53-43.png">
+    
+                </div><!--projeto-single-->
+               
+                <div class="projeto-two">
+                    <h2>Clone Amazon Prime</h2>
+                    <img src="image/Captura de tela de 2023-06-13 18-35-47.png">
+    
+                </div><!--projeto-single-->
+    
+    
+                <div class="projeto-two">
+                    <h2>Pizzaria</h2>
+                    <img src="image/pizzaria.png">
+    
+                </div><!--projeto-single-->
+
+         
+        </div><!--center-->
+
+    </section><!--number-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleciona o elemento do link "Sobre mim"
+            const sobreLink = document.querySelector(".sobre-link");
+            
+            // Adiciona um evento de clique ao link
+            sobreLink.addEventListener("click", function(event) {
+                event.preventDefault(); // Impede o comportamento padrão do link
+                
+                // Obtém a posição (offset) da seção "Sobre mim" em relação ao topo da página
+                const sobreSection = document.getElementById("sobre-mim");
+                const offsetTop = sobreSection.getBoundingClientRect().top;
+                
+                // Rola a página até a seção "Sobre mim" com uma animação suave
+                window.scrollBy({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Seleciona o elemento do link "Home"
+        const homeLink = document.querySelector(".home-link");
+        
+        // Adiciona um evento de clique ao link
+        homeLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            
+            // Obtém a posição (offset) da seção "Home" em relação ao topo da página
+            const homeSection = document.getElementById("home");
+            const offsetTop = homeSection.getBoundingClientRect().top;
+            
+            // Rola a página até a seção "Home" com uma animação suave
+            window.scrollBy({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+        });
+    });
+</script>
+
+<script>
+    const menuDiv = document.getElementById('menu-mobile')
+    const btnAnimar = document.getElementById('btn-menu')
+
+    menuDiv.addEventListener('click',animarMenu);
+
+    function animarMenu(){
+        menuDiv.classList.toggle('abrir')
+        btnAnimar.classList.toggle('ative')
+    }
+</script>
+
+   
+</body>
+
+</html>
